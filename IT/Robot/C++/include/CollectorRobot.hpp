@@ -8,23 +8,20 @@
 #ifndef COLLECTORROBOT_HPP_
 #define COLLECTORROBOT_HPP_
 #include "Robot.hpp"
+#include <vector>
 
 class CollectorRobot : public Robot {
     public:
-        CollectorRobot(std::string& name, int max_capacity, Position sortingRobotPosition);
-
+        CollectorRobot(std::string& name, int max_capacity, Position sortingRobotPosition, std::vector<std::string> arenaMap);
         void move(float dx, float dy, float dz) override;
-
-        bool isWaste(int waste);
-
-        void collect(int waste);
- 
+        bool isWaste(char character);
+        void collect(char character);
+        void decharge(std::vector<Waste> &sorterContainer);
         ~CollectorRobot();
-
     private:
         bool _is_moving;
         int _max_capacity;
-
+        std::vector<Waste> _container;
 };
 
 #endif /* !COLLECTORROBOT_HPP_ */

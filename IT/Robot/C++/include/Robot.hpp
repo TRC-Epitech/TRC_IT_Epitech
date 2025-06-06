@@ -14,6 +14,18 @@
 
 #include "../include/Error.hpp"
 
+typedef struct waste_s {
+    char character;
+    WasteType type;
+} Waste;
+
+enum WasteType {
+    PLASTIC,
+    METAL,
+    GLASS,
+    HOUSEHOLD_WASTE
+};
+
 enum status {
     INACTIVE,
     ACTIVE
