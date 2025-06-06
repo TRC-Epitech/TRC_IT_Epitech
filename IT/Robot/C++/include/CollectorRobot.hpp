@@ -13,7 +13,7 @@
 class CollectorRobot : public Robot {
     public:
         CollectorRobot(std::string& name, int max_capacity, Position sortingRobotPosition, std::vector<std::string> arenaMap);
-        void move(float dx, float dy, float dz) override;
+        void move(void) override;
         bool isWaste(char character);
         void collect(char character);
         void decharge(std::vector<Waste> &sorterContainer);

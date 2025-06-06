@@ -15,7 +15,7 @@ class SortingRobot : public Robot {
     public:
         SortingRobot(std::string& name);
 
-        void move(float dx, float dy, float dz) override;
+        void move(void) override;
 
         void sort(Waste waste);
 

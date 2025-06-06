@@ -43,7 +43,7 @@ class Robot {
         Robot(const std::string& name);
         
         // [============== Pure Virtual Method ============]
-        virtual void move(float dx, float dy, float dz) = 0;
+        virtual void move(void) = 0;
 
         // [============== Common Methods ============]
         void recharge(float amount);
